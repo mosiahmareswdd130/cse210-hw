@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-class Program
+class Program1
 {
     static void Main(string[] args)
     {
