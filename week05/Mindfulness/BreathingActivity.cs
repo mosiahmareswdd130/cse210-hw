@@ -26,6 +26,6 @@ public class BreathingActivity : Activity
             ShowCountdown(4);
             breatheIn = !breatheIn;
         }
-        DisplayMessage();
+        DisplayEndingMessage();
     }
 }
