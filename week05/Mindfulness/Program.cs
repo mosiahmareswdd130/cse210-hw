@@ -15,7 +15,7 @@ while (true)
     Console.WriteLine();
     Console.Write("Select an option: ");
 
-    string? choice = Console.ReadLine();
+    string choice = Console.ReadLine();
 
     switch (choice)
     {
