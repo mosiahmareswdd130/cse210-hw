@@ -2,17 +2,18 @@ namespace Mindfulness;
 
 public class ActivityLog
 {
-    private const string LongFilePath = "activity_log.txt";
+   private const string LogFilePath = "activity_log.txt";
     private List<string> _entries;
 
-    public ActivityLog(){
+    public ActivityLog()
+    {
         _entries = new List<string>();
         LoadFromFile();
     }
 
-    public void RecordActivity(string activityName, int durationSeconds)
+       public void RecordActivity(string activityName, int durationSeconds)
     {
-        string timestamp = DateTime.Now.ToString("yy-MM-dd HH:mm:ss");
+        string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         string entry = $"[{timestamp}] {activityName} — {durationSeconds} seconds";
         _entries.Add(entry);
         SaveToFile();

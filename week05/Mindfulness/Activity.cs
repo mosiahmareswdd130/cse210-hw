@@ -4,16 +4,16 @@ public class Activity
 {
     private string _name;
     private string _description;
-    private int _durationSeconds;
+    protected int _durationSeconds;
 
     public Activity(string name, string description)
     {
-        name = _name;
-        description = _description;
+        _name = name;
+        _description = description;
     }
 
     public string GetName() => _name;
-    public int GetDurationSeconds => _durationSeconds;
+    public int GetDurationSeconds() => _durationSeconds;
 
     public void DisplayStartingMessage()
     {
