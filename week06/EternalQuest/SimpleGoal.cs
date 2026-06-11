@@ -1,0 +1,36 @@
+namespace EternalQuest;
+
+public class SimpleGoal : Goal
+{
+    private bool _isComplete;
+
+    public SimpleGoal(string shortName, string description, int points)
+    : base (shortName, description, points)
+    {
+        _isComplete = false;
+    }
+
+    public SimpleGoal(string shortName, string description, int points, bool isComplete)
+        : base(shortName, description, points)
+    {
+        _isComplete = isComplete;
+    }
+
+    public override int RecordEvent()
+    {
+        if (IsComplete())
+        {
+            Console.WriteLine("The goal is complete, you got this!!!");
+            return 0;
+        }
+        _isComplete = true;
+        return _points;
+    }
+
+    public override bool IsComplete() => _isComplete;
+
+    public override string GetStringRepresentation()
+    {
+        return $"SimpleGoal:{GetShortName()}:{GetDescription()}:{_points}:{_isComplete}";
+    }
+}
